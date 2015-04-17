@@ -1,0 +1,43 @@
+/**
+ * Plugin styles
+ *
+ * @package  WebMan Toggle Admin Bar
+ *
+ * @since    1.0
+ * @version  1.0
+ */
+
+
+
+.wm-toggle-admin-bar,
+.wm-toggle-admin-bar:hover,
+.wm-toggle-admin-bar:active,
+.wm-toggle-admin-bar:focus {
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+}
+
+.wm-toggle-admin-bar {
+	display: block;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	padding: 1em 1.62em;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: #6c6;
+	color: #030;
+	z-index: 9998;
+	-webkit-box-shadow: 0 0 .62em rgba(0,0,0, .66);
+	        box-shadow: 0 0 .62em rgba(0,0,0, .66);
+}
+
+	.admin-bar .wm-toggle-admin-bar {
+		background: #d33;
+		color: #bff;
+	}
+
+
+
+/* END OF FILE */
