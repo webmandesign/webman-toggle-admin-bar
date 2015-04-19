@@ -164,7 +164,7 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 				//Helper variables
 					global $wp;
 
-					$url = ( isset( $wp->request ) ) ? ( home_url( $wp->request ) ) : ( false );
+					$url = ( isset( $wp->request ) ) ? ( add_query_arg( $wp->query_string, '', home_url( $wp->request ) ) ) : ( false );
 
 					//Requirements check
 						if ( ! $url ) {
@@ -194,7 +194,7 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 					}
 
 				//Output
-					echo '<a href="' . esc_url( $url ) . '" title="' . __( 'Toggle admin bar', 'wm_domain' ) . '" class="wm-toggle-admin-bar">' . $button_text . '</a>';
+					echo '<div class="wm-toggle-admin-bar-container"><a href="' . esc_url( $url ) . '" title="' . __( 'Toggle admin bar', 'wm_domain' ) . '" class="wm-toggle-admin-bar">' . $button_text . '</a></div>';
 
 			} // /toggle_button
 

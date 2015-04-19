@@ -9,34 +9,55 @@
 
 
 
-.wm-toggle-admin-bar,
-.wm-toggle-admin-bar:hover,
-.wm-toggle-admin-bar:active,
-.wm-toggle-admin-bar:focus {
-	text-decoration: none;
-	outline: 0;
-	border: 0;
-}
-
-.wm-toggle-admin-bar {
-	display: block;
+.wm-toggle-admin-bar-container {
 	position: fixed;
+	min-width: 12em;
+	min-height: 12em;
 	left: 0;
 	bottom: 0;
-	padding: 1em 1.62em;
-	text-transform: uppercase;
-	font-weight: bold;
-	background: #6c6;
-	color: #030;
+	overflow: hidden;
 	z-index: 9998;
-	-webkit-box-shadow: 0 0 .62em rgba(0,0,0, .66);
-	        box-shadow: 0 0 .62em rgba(0,0,0, .66);
 }
 
-	.admin-bar .wm-toggle-admin-bar {
-		background: #d33;
-		color: #bff;
+	.wm-toggle-admin-bar {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding: 1em 1.62em;
+		margin: 1em;
+		text-transform: uppercase;
+		font-weight: bold;
+		background: #6c6;
+		color: #030;
+		-webkit-box-shadow: 0 1px .38em rgba(0,0,0, .33);
+		        box-shadow: 0 1px .38em rgba(0,0,0, .33);
+		-webkit-transition: all .4s ease-in-out;
+		        transition: all .4s ease-in-out;
+		-webkit-transform: translateX( -100% ) translateY( 100% );
+		    -ms-transform: translateX( -100% ) translateY( 100% );
+		        transform: translateX( -100% ) translateY( 100% );
 	}
+
+	.wm-toggle-admin-bar,
+	.wm-toggle-admin-bar:hover,
+	.wm-toggle-admin-bar:active,
+	.wm-toggle-admin-bar:focus {
+		text-decoration: none;
+		outline: 0;
+		border: 0;
+	}
+
+		.admin-bar .wm-toggle-admin-bar {
+			background: #d33;
+			color: #bff;
+		}
+
+		.wm-toggle-admin-bar-container:hover .wm-toggle-admin-bar {
+			-webkit-transform: translateX( 0 ) translateY( 0 );
+			    -ms-transform: translateX( 0 ) translateY( 0 );
+			        transform: translateX( 0 ) translateY( 0 );
+		}
 
 
 
