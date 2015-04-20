@@ -7,7 +7,7 @@
  * @link  http://www.webmandesign.eu
  *
  * @since    1.0
- * @version  1.0
+ * @version  1.1
  */
 
 
@@ -103,11 +103,15 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 			 * Can the button be displayed?
 			 *
 			 * @since    1.0
-			 * @version  1.0
+			 * @version  1.1
 			 */
 			public function can_display_button() {
 
-				if ( ! is_user_logged_in() ) {
+				if (
+						! is_user_logged_in()
+						|| is_admin()
+						|| isset( $GLOBALS['wp_customize'] )
+					) {
 					return false;
 				}
 
@@ -121,7 +125,7 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 			 * Enqueue styles and scripts
 			 *
 			 * @since    1.0
-			 * @version  1.0
+			 * @version  1.1
 			 */
 			public function enqueue_assets() {
 
@@ -131,7 +135,7 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 					}
 
 				//Helper variables
-					$plugin_data = get_plugin_data( WMTAB_PLUGIN_FILE, false );
+					$plugin_data = ( function_exists( 'get_plugin_data' ) ) ? ( get_plugin_data( WMTAB_PLUGIN_FILE, false ) ) : ( array( 'Version' => $GLOBALS['wp_version'] ) );
 
 				//Enqueue assets
 					wp_enqueue_style(
