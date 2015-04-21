@@ -14,7 +14,7 @@
  * Plugin Name:        WebMan Toggle Admin Bar
  * Plugin URI:         http://www.webmandesign.eu/
  * Description:        A plugin for disabling and enabling WordPress admin bar on front end. The admin bar needs to be enabled in WordPress admin first.
- * Version:            1.1
+ * Version:            1.2
  * Author:             WebMan - Oliver Juhas
  * Author URI:         http://www.webmandesign.eu/
  * License:            GPL-2.0+
@@ -22,7 +22,7 @@
  * Text Domain:        wm_domain
  * Domain Path:        /languages
  * Requires at least:  4.1
- * Tested up to:       4.1
+ * Tested up to:       4.2
  */
 
 
@@ -42,8 +42,8 @@ if ( ! defined( 'WPINC' ) ) exit;
 
 		//Paths
 			if ( ! defined( 'WMTAB_PLUGIN_FILE' ) ) define( 'WMTAB_PLUGIN_FILE', __FILE__ );
-			if ( ! defined( 'WMTAB_PLUGIN_DIR' ) ) define( 'WMTAB_PLUGIN_DIR',  trailingslashit( plugin_dir_path( __FILE__ ) ) );
-			if ( ! defined( 'WMTAB_PLUGIN_URL' ) ) define( 'WMTAB_PLUGIN_URL',  trailingslashit( plugin_dir_url( __FILE__ ) ) );
+			if ( ! defined( 'WMTAB_PLUGIN_DIR' ) )  define( 'WMTAB_PLUGIN_DIR',  trailingslashit( plugin_dir_path( __FILE__ ) ) );
+			if ( ! defined( 'WMTAB_PLUGIN_URL' ) )  define( 'WMTAB_PLUGIN_URL',  trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 
 

@@ -7,7 +7,7 @@
  * @link  http://www.webmandesign.eu
  *
  * @since    1.0
- * @version  1.1
+ * @version  1.2
  */
 
 
@@ -156,7 +156,7 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 			 * @link  https://kovshenin.com/2012/current-url-in-wordpress/
 			 *
 			 * @since    1.0
-			 * @version  1.0
+			 * @version  1.2
 			 */
 			public function toggle_button() {
 
@@ -175,12 +175,8 @@ if ( ! class_exists( 'WM_Toggle_Admin_Bar' ) ) {
 							return;
 						}
 
-						$url = str_replace( array(
-								'?wmtab-on', '&wmtab-on', '&amp;wmtab-on',
-								'?wmtab-off', '&wmtab-off', '&amp;wmtab-off',
-							), '', $url );
-
-						$url .= ( strpos( $url, '?' ) ) ? ( '&amp;wmtab-on' ) : ( '?wmtab-on' );
+						$url = esc_url( remove_query_arg( array( 'wmtab-on', 'wmtab-off' ), $url ) );
+						$url = esc_url( add_query_arg( 'wmtab-on', '', $url ) );
 
 				//Processing
 					if ( ! is_admin_bar_showing() ) {
