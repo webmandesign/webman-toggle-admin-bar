@@ -2,6 +2,8 @@
 
 Toggles the WordPress admin bar the right way. Theme developer's best friend!
 
+> *Actually, there is a [great Chrome browser extension](https://chrome.google.com/webstore/detail/wordpress-admin-bar-contr/joldejophkhmeajgjenfnfdpfjkalckn) that does the job perfectly fine.*
+
 ## Description
 
 **[WebMan Toggle Admin Bar](http://www.webmandesign.eu/ "WebMan Design") is WordPress plugin that provides an easy way to toggle the WordPress admin bar on your website's front end.**
